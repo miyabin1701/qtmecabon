@@ -1,0 +1,1925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingDlg</class>
+ <widget class="QDialog" name="SettingDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>qtMeCabon Setting</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_20">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>TTS SEL</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="ttsSelectorCombo"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>辞書更新時はアプリを再起動してください！</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="OkButton">
+         <property name="text">
+          <string>OK</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTabWidget" name="settingTab">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Mecab</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="5" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>168</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>168</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;CSV辞書文字セット&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_2">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>168</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>168</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;辞書文字セット&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_3">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>168</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>168</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;システム辞書フォルダー&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="systemDictionaryFolderEdit">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="systemDictionaryFolderRefButton">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="text">
+                <string>参照</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="4" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="minimumSize">
+                <size>
+                 <width>168</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>168</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>6</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;システム辞書構築フォルダー&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="systemDictionaryBuildFolderEdit"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="systemDictionaryBuildFolderRefButton">
+               <property name="text">
+                <string>参照</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="minimumSize">
+                <size>
+                 <width>168</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>168</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>MeCabパス</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="mecabPathEdit"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="mecabPathRefButton">
+               <property name="text">
+                <string>参照</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="3" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>168</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>168</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;ユーザーCSV辞書パス&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="userCsvDictionaryFolderEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="userCsvDictionaryFolderRefButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>参照</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>168</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>168</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;ユーザー辞書フルパス&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="userDictionaryPathEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="userDictionaryPathRefButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>参照</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Sapi5.4</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <spacer name="horizontalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="sapiRateLabel">
+               <property name="text">
+                <string>RATE 9999</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="extDial" name="sapiRateDial"/>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="sapiVolumeLabel">
+               <property name="text">
+                <string>VOLUME 9999</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="extDial" name="sapiVolumeDial"/>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>声選択</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="sapiVoiceSelCmbbox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>無音残</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="sapiMuonZan"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_13">
+               <property name="text">
+                <string>(ms)変換毎の後部無音時間最大max1000</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QGroupBox" name="groupBox">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="title">
+                <string>VOICEVOX for sapiの音声使用時は設定してください。 VoiceVox coreをお使いください！</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_21">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_13">
+                  <item>
+                   <widget class="QLabel" name="label_14">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>VOICEVOXrun.exeパス</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="sapiVoiceVox4sapiPathEdit">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="sapiVoicevox4sapiRefButton">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>参照</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <item>
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="title">
+                <string>出力モードはSAPIへのデータの適切な渡し方が確立していないための設定です</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_22">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_15">
+                  <item>
+                   <widget class="QLabel" name="label_15">
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>出力モード</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="sapiOutputModeSelCmbbox"/>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>Aqtk10跡地</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;声選択&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="aqtkVoiceSel"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="1" column="0">
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QLabel" name="label_17">
+                 <property name="text">
+                  <string>速度</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="AqtkSpeedValue">
+                 <property name="text">
+                  <string>SpeedValue</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="4" column="2">
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QLabel" name="label_22">
+                 <property name="text">
+                  <string>VOLUME</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="aqtkVolumeValue">
+                 <property name="text">
+                  <string>VolumeValue</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="1">
+              <widget class="extDial" name="aqtkHighDial">
+               <property name="notchesVisible">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="extDial" name="aqtkStepDial">
+               <property name="notchesVisible">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <widget class="QLabel" name="label_21">
+                 <property name="text">
+                  <string>音程２</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="aqtkStep2Value">
+                 <property name="text">
+                  <string>Step2Value</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_19">
+                 <property name="text">
+                  <string>高さ</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="aqtkHighValue">
+                 <property name="text">
+                  <string>HighValue</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="2">
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <item>
+                <widget class="QLabel" name="label_18">
+                 <property name="text">
+                  <string>音程</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="aqtkStepValue">
+                 <property name="text">
+                  <string>StepValue</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="2">
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QLabel" name="label_20">
+                 <property name="text">
+                  <string>アクセント</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="aqtkAccentValue">
+                 <property name="text">
+                  <string>AccentValue</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="3">
+              <widget class="extDial" name="aqtkAccentDial">
+               <property name="notchesVisible">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="extDial" name="aqtkStep2Dial">
+               <property name="notchesVisible">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="extDial" name="aqtkVolumeDial">
+               <property name="notchesVisible">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="extDial" name="aqtkSpeedDial">
+               <property name="tracking">
+                <bool>true</bool>
+               </property>
+               <property name="wrapping">
+                <bool>false</bool>
+               </property>
+               <property name="notchesVisible">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>VoiceVox core</string>
+          </attribute>
+          <widget class="QWidget" name="gridLayoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>821</width>
+             <height>391</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_24">
+              <property name="text">
+               <string>音声選択</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QComboBox" name="voicevoxVoiceSelComboBox">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="maxVisibleItems">
+               <number>16</number>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="OpenJTalkDicPathEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="OpenJTalkDicPathRefButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>参照</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;OpenJtalk&lt;br/&gt;dictionary&lt;br/&gt;dir&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="OpenJTalkDicBuildDirEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_23">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;OpenJtalk&lt;br/&gt;dictionary&lt;br/&gt;build dir&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QPushButton" name="OpenJTalkDicBuildDirRefButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>参照</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_5">
+          <attribute name="title">
+           <string>その他</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="texyDisplayBlackBakMode">
+               <property name="text">
+                <string>テキスト背景色　黒</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="monitorSleepPouse">
+               <property name="text">
+                <string>モニター休止連動Pouse</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="symbleTalkSkip">
+               <property name="text">
+                <string>記号読みSkip</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_5">
+             <property name="title">
+              <string>インフォメーションウインドウの行数制限（０：無制限）変更時undo,redo履歴などが消えるらしいです</string>
+             </property>
+             <widget class="QWidget" name="horizontalLayoutWidget_2">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>29</y>
+                <width>791</width>
+                <height>34</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_24">
+               <item>
+                <widget class="QLineEdit" name="infoWndlineLimitEdit"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string/>
+             </property>
+             <widget class="QWidget" name="horizontalLayoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>19</y>
+                <width>791</width>
+                <height>71</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_23">
+               <item>
+                <widget class="QLabel" name="label_9">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;RAM DISK &lt;br/&gt;TEMP FOLDER&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="RAMDISKDIR"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="RamDiskDirRef">
+                 <property name="text">
+                  <string>参照</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>text editor setting</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_18">
+                <item>
+                 <widget class="QLabel" name="label_29">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;editor path&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="edtorExePathEdit"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="edtorExePathRefButtonClicked">
+                  <property name="text">
+                   <string>参照</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_19">
+                <item>
+                 <widget class="QLabel" name="label_30">
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;editor tag jump&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;　　line:%l&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;　　file:%f&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="edtorTagJumpCmdEdit"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>extDial</class>
+   <extends>QDial</extends>
+   <header>extdial.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ttsSelectorCombo</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>ttsCmbSelChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>122</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OkButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>OkButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>485</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>536</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mecabPathRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>MeCabExePathRefButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>824</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>78</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>systemDictionaryFolderRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>systemDictionaryFolderRefButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>824</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>userDictionaryPathRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>userDictionaryRefButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>824</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>userCsvDictionaryFolderRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>userCsvDictionaryRefButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>824</x>
+     <y>287</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>systemDictionaryBuildFolderRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>systemDictionaryBuildFolderRefButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>824</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mecabPathEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>meCabPathEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>systemDictionaryFolderEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>systemDictionaryEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>userDictionaryPathEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>userDictionaryEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>userCsvDictionaryFolderEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>userCsvDictionaryEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>198</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>systemDictionaryBuildFolderEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>systemDictionaryBuildFolderEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_3</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>dictionaryCharSetSelChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>690</x>
+     <y>415</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_2</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>csvDictionaryCharSetSelChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>286</x>
+     <y>415</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aqtkVoiceSel</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>aqtkVoiceSelChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aqtkSpeedDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>aqtkSpeedDialChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>324</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aqtkStepDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>aqtkStepDialChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>144</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aqtkHighDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>aqtkHighDialChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>324</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aqtkAccentDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>aqtkAccentDialChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>588</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aqtkStep2Dial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>aqtkStep2DialChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>324</x>
+     <y>359</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aqtkVolumeDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>aqtkVolumeDialChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>359</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sapiVolumeDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>sapiVolumeDialChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>698</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sapiRateDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>sapiRateDialChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sapiMuonZan</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>sapiMuonZanEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>252</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sapiVoicevox4sapiRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>sapiVoiceVoxRunexeRefClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>813</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sapiVoiceSelCmbbox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>sapiVoiceSelChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>589</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sapiVoiceVox4sapiPathEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>sapiVoiceVoxRunexeEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>337</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sapiOutputModeSelCmbbox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>sapiOutputModeSelChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>418</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>texyDisplayBlackBakMode</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>otherTextEditBlackModeCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>592</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtorExePathEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>otherEditorPathEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>333</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>10</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtorExePathRefButtonClicked</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>otherEdtorPathRefButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>814</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>585</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtorTagJumpCmdEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>otherEditorTagJumpSettingEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>229</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>412</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>settingTab</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>settingTabChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>827</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>848</x>
+     <y>32</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>systemDictionaryFolderRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>systemDictionaryFolderRefButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>824</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>852</x>
+     <y>145</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OkButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>485</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>718</x>
+     <y>499</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RamDiskDirRef</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>RamDiskDirRefClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>821</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>839</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RAMDISKDIR</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>RamDiskDirEditingFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>358</x>
+     <y>265</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>839</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OpenJTalkDicBuildDirRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>OpenJTalkDicBuildDirRefClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>832</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>849</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OpenJTalkDicPathRefButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>OpenJTalkDicPathRefClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>832</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>848</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OpenJTalkDicPathEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>OpenJTalkDicPathEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>624</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>853</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OpenJTalkDicBuildDirEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>OpenJTalkDicBuildDirEditFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>541</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>844</x>
+     <y>377</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>voicevoxVoiceSelComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>voicevoxIndexChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>213</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>845</x>
+     <y>301</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>symbleTalkSkip</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>onClickedsymbolSkip()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>754</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>846</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>monitorSleepPouse</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>onClickedMonitorSleepPause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>546</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>844</x>
+     <y>183</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>infoWndlineLimitEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>SettingDlg</receiver>
+   <slot>infoWndMaxLineLimmitTextChangeFinished()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>403</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>ttsCmbSelChanged()</slot>
+  <slot>OkButtonClicked()</slot>
+  <slot>MeCabExePathRefButtonClicked()</slot>
+  <slot>systemDictionaryFolderRefButtonClicked()</slot>
+  <slot>userDictionaryRefButtonClicked()</slot>
+  <slot>userCsvDictionaryRefButtonClicked()</slot>
+  <slot>systemDictionaryBuildFolderRefButtonClicked()</slot>
+  <slot>meCabPathEditFinished()</slot>
+  <slot>systemDictionaryEditFinished()</slot>
+  <slot>userDictionaryEditFinished()</slot>
+  <slot>userCsvDictionaryEditFinished()</slot>
+  <slot>systemDictionaryBuildFolderEditFinished()</slot>
+  <slot>dictionaryCharSetSelChanged()</slot>
+  <slot>csvDictionaryCharSetSelChanged()</slot>
+  <slot>aqtkVoiceSelChanged()</slot>
+  <slot>aqtkSpeedDialChanged()</slot>
+  <slot>aqtkStepDialChanged()</slot>
+  <slot>aqtkHighDialChanged()</slot>
+  <slot>aqtkAccentDialChanged()</slot>
+  <slot>aqtkStep2DialChanged()</slot>
+  <slot>aqtkVolumeDialChanged()</slot>
+  <slot>sapiVolumeDialChanged()</slot>
+  <slot>sapiRateDialChanged()</slot>
+  <slot>sapiMuonZanEditFinished()</slot>
+  <slot>sapiVoiceVoxRunexeRefClicked()</slot>
+  <slot>sapiVoiceSelChanged()</slot>
+  <slot>sapiVoiceVoxRunexeEditFinished()</slot>
+  <slot>sapiOutputModeSelChanged()</slot>
+  <slot>otherTextEditBlackModeCheckBoxClicked()</slot>
+  <slot>otherEditorPathEditFinished()</slot>
+  <slot>otherEdtorPathRefButtonClicked()</slot>
+  <slot>otherEditorTagJumpSettingEditFinished()</slot>
+  <slot>settingTabChanged()</slot>
+  <slot>RamDiskDirRefClicked()</slot>
+  <slot>RamDiskDirEditingFinished()</slot>
+  <slot>slot2()</slot>
+  <slot>OpenJTalkDicBuildDirRefClicked()</slot>
+  <slot>OpenJTalkDicPathRefClicked()</slot>
+  <slot>OpenJTalkDicPathEditFinished()</slot>
+  <slot>OpenJTalkDicBuildDirEditFinished()</slot>
+  <slot>voicevoxIndexChanged()</slot>
+  <slot>onClickedsymbolSkip()</slot>
+  <slot>slot1()</slot>
+  <slot>onClickedMonitorSleepPause()</slot>
+  <slot>infoWndMaxLineLimmitTextChangeFinished()</slot>
+ </slots>
+</ui>

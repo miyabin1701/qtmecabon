@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{17AA6506-612E-4325-A303-06F3165D94F0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Static</UseOfAtl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfAtl>Static</UseOfAtl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
+    <IncludePath>C:\Qt\6.5.2\msvc2019_64\include;C:\Qt\6.5.2\msvc2019_64\include\QtCore;C:\Qt\6.5.2\msvc2019_64\include\QtWidgets;..\build-qtMeCabon-Desktop_Qt_6_5_2_MSVC2019_64bit-Debug\portaudio_x64_autogen\include;..\build-qtMeCabon-Desktop_Qt_6_5_2_MSVC2019_64bit-Debug\qtMeCabon_autogen\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
+    <IncludePath>C:\Qt\6.5.2\msvc2019_64\include;C:\Qt\6.5.2\msvc2019_64\include\QtCore;C:\Qt\6.5.2\msvc2019_64\include\QtWidgets;..\build-qtMeCabon-Desktop_Qt_6_5_2_MSVC2019_64bit-Debug\portaudio_x64_autogen\include;..\build-qtMeCabon-Desktop_Qt_6_5_2_MSVC2019_64bit-Debug\qtMeCabon_autogen\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
+    <IncludePath>C:\Qt\6.5.2\msvc2019_64\include;C:\Qt\6.5.2\msvc2019_64\include\QtCore;C:\Qt\6.5.2\msvc2019_64\include\QtWidgets;..\build-qtMeCabon-Desktop_Qt_6_5_2_MSVC2019_64bit-Debug\portaudio_x64_autogen\include;..\build-qtMeCabon-Desktop_Qt_6_5_2_MSVC2019_64bit-Debug\qtMeCabon_autogen\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
+    <IncludePath>C:\Qt\6.5.2\msvc2019_64\include;C:\Qt\6.5.2\msvc2019_64\include\QtCore;C:\Qt\6.5.2\msvc2019_64\include\QtWidgets;..\build-qtMeCabon-Desktop_Qt_6_5_2_MSVC2019_64bit-Debug\portaudio_x64_autogen\include;..\build-qtMeCabon-Desktop_Qt_6_5_2_MSVC2019_64bit-Debug\qtMeCabon_autogen\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cmultilang.cpp" />
+    <ClCompile Include="corpasdialog.cpp" />
+    <ClCompile Include="csvdictionarysarchdialog.cpp" />
+    <ClCompile Include="extdial.cpp" />
+    <ClCompile Include="exTextEdit.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="mecabif.cpp" />
+    <ClCompile Include="messagebuff.cpp" />
+    <ClCompile Include="out\build\windows-default\cmakefiles\3.20.21032501-msvc_2\compileridcxx\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="out\build\windows-default\cmakefiles\showincludes\main.c" />
+    <ClCompile Include="out\build\x64-debug\cmakefiles\3.20.21032501-msvc_2\compileridcxx\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="out\build\x64-debug\cmakefiles\showincludes\main.c" />
+    <ClCompile Include="playlinesapi.cpp" />
+    <ClCompile Include="portaudioif.cpp" />
+    <ClCompile Include="pretalk.cpp" />
+    <ClCompile Include="profilevalues.cpp" />
+    <ClCompile Include="settingdialog.cpp" />
+    <ClCompile Include="settingdlg.cpp" />
+    <ClCompile Include="test02.cpp" />
+    <ClCompile Include="testdialog.cpp" />
+    <ClCompile Include="text2wave.cpp" />
+    <ClCompile Include="winpretranslatemessage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cmultilang.h" />
+    <ClInclude Include="corpasdialog.h" />
+    <ClInclude Include="csvdictionarysarchdialog.h" />
+    <ClInclude Include="extdial.h" />
+    <ClInclude Include="exTextEdit.h" />
+    <ClInclude Include="mainwindow.h" />
+    <ClInclude Include="mecab.h" />
+    <ClInclude Include="mecabdll.h" />
+    <ClInclude Include="mecabif.h" />
+    <ClInclude Include="messagebuff.h" />
+    <ClInclude Include="out\build\windows-default\cmakefiles\showincludes\foo.h" />
+    <ClInclude Include="out\build\x64-debug\cmakefiles\showincludes\foo.h" />
+    <ClInclude Include="playlinesapi.h" />
+    <ClInclude Include="portaudioif.h" />
+    <ClInclude Include="portaudio\include\pa_win_ds.h" />
+    <ClInclude Include="portaudio\include\pa_win_wasapi.h" />
+    <ClInclude Include="portaudio\include\pa_win_waveformat.h" />
+    <ClInclude Include="portaudio\include\pa_win_wdmks.h" />
+    <ClInclude Include="portaudio\include\pa_win_wmme.h" />
+    <ClInclude Include="portaudio\include\portaudio.h" />
+    <ClInclude Include="pretalk.h" />
+    <ClInclude Include="profilevalues.h" />
+    <ClInclude Include="settingdialog.h" />
+    <ClInclude Include="settingdlg.h" />
+    <ClInclude Include="settingValues.h" />
+    <ClInclude Include="test02.h" />
+    <ClInclude Include="testdialog.h" />
+    <ClInclude Include="text2wave.h" />
+    <ClInclude Include="ui_SettingDialog.h" />
+    <ClInclude Include="winpretranslatemessage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="out\build\windows-default\cmakefiles\3.20.21032501-msvc_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="out\build\x64-debug\cmakefiles\3.20.21032501-msvc_2\CMakeDetermineCompilerABI_CXX.bin" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

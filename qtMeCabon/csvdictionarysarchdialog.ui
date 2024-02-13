@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CsvDictionarySarchDialog</class>
+ <widget class="QDialog" name="CsvDictionarySarchDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>363</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="SarchWordLineEdit"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="CSVSarchButton">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>CSV検索</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="BuildDictionaryButton">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>BuildDic</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="outputText">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>SarchWordLineEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>CsvDictionarySarchDialog</receiver>
+   <slot>SarchWordEdit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-13</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CSVSarchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CsvDictionarySarchDialog</receiver>
+   <slot>CsvSarchButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>-12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BuildDictionaryButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CsvDictionarySarchDialog</receiver>
+   <slot>BuildDictionaryButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>SarchWordEdit()</slot>
+  <slot>CsvSarchButtonClicked()</slot>
+  <slot>BuildDictionaryButtonClicked()</slot>
+ </slots>
+</ui>

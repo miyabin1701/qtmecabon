@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>521</width>
+    <height>434</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>qtMeCabon</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="exTextEdit" name="talkTextEdit"/>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="extDial" name="Volume">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="SarchStr"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="SarchButton">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>baseline_search_black_18dp.png</normaloff>
+            <normalon>:/images/images/baseline_search_black_18dp.png</normalon>baseline_search_black_18dp.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="PlayButton">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="qtMeCabon.qrc">
+            <normaloff>:/images/images/baseline_play_arrow_black_18dp.png</normaloff>
+            <normalon>:/images/images/baseline_pause_black_18dp.png</normalon>:/images/images/baseline_play_arrow_black_18dp.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="StopButton">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>baseline_stop_black_18dp.png</normaloff>
+            <normalon>:/images/images/baseline_stop_black_18dp.png</normalon>baseline_stop_black_18dp.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>extDial</class>
+   <extends>QDial</extends>
+   <header>extdial.h</header>
+  </customwidget>
+  <customwidget>
+   <class>exTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header>extextedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="qtMeCabon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>StopButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onstopButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>509</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>595</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PlayButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onPlayButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SarchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onSarchButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>391</x>
+     <y>404</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Volume</sender>
+   <signal>sliderPressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onVolumePressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>61</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PlayButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onPlayButtonToggled()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>643</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Volume</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onVolumeChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>402</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onstopButton()</slot>
+  <slot>onPlayButton()</slot>
+  <slot>onSarchButton()</slot>
+  <slot>onVolumeChange()</slot>
+  <slot>onPlayButtonToggled()</slot>
+  <slot>onVolumePressed()</slot>
+ </slots>
+</ui>
