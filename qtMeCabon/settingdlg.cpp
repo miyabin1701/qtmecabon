@@ -480,7 +480,8 @@ void SettingDlg::on_systemDictionaryFolderRefButton_clicked()
         {   delete pprof->mecab.pwszSystemDictionaryFolder;
         }
         qDebug() << QString("filePaths::%1").arg(filePaths);
-        pprof->mecab.pwszSystemDictionaryFolder = new QString( filePaths );
+        pprof->vvox.pwszOpenJTalkDicPath =
+            pprof->mecab.pwszSystemDictionaryFolder = new QString( filePaths );
         ui->systemDictionaryFolderEdit->setText( *( pprof->mecab.pwszSystemDictionaryFolder ));
         qDebug() << QString("*pprof->mecab.pwszSystemDictionaryFolder::%1").arg(*( pprof->mecab.pwszSystemDictionaryFolder));
     }
@@ -565,7 +566,8 @@ void SettingDlg::on_systemDictionaryBuildFolderRefButton_clicked()
         if ( !pprof->mecab.pwszSystemDictionaryBuildFolder->isEmpty())
         {   delete pprof->mecab.pwszSystemDictionaryBuildFolder;
         }
-        pprof->mecab.pwszSystemDictionaryBuildFolder = new QString( filePaths );
+        pprof->vvox.pwszOpenJTalkDicBuildDir =
+            pprof->mecab.pwszSystemDictionaryBuildFolder = new QString( filePaths );
         ui->systemDictionaryBuildFolderEdit->setText( *( pprof->mecab.pwszSystemDictionaryBuildFolder ));
     }
 }
@@ -599,7 +601,8 @@ void SettingDlg::on_systemDictionaryFolderEdit_editingFinished()
 {   if ( !pprof->mecab.pwszSystemDictionaryFolder->isEmpty())
     {   delete pprof->mecab.pwszSystemDictionaryFolder;
     }
-    pprof->mecab.pwszSystemDictionaryFolder = new QString( ui->systemDictionaryFolderEdit->text());
+    pprof->vvox.pwszOpenJTalkDicPath =
+        pprof->mecab.pwszSystemDictionaryFolder = new QString( ui->systemDictionaryFolderEdit->text());
 }
 
 
@@ -647,7 +650,8 @@ void SettingDlg::on_systemDictionaryBuildFolderEdit_editingFinished()
 {   if ( !pprof->mecab.pwszSystemDictionaryBuildFolder->isEmpty())
     {   delete pprof->mecab.pwszSystemDictionaryBuildFolder;
     }
-    pprof->mecab.pwszSystemDictionaryBuildFolder = new QString( ui->systemDictionaryBuildFolderEdit->text());
+    pprof->vvox.pwszOpenJTalkDicBuildDir =
+        pprof->mecab.pwszSystemDictionaryBuildFolder = new QString( ui->systemDictionaryBuildFolderEdit->text());
 }
 
 

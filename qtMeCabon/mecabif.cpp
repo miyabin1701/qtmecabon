@@ -80,33 +80,49 @@ mecab_model_t *mecabif::mecab_model_new_build_option()
     char szUsrDic[_MAX_PATH] = { NULL };
     int iIdxArg = 0;
     char *p;
-//  QString qsBuildOption;
+    QString qsSysdic, qsUsrdic;
+    messageBuff msgBuff;        // for debug
+    mecab_model_t    *model;
 
 //    qDebug() << QString("*pprof->mecab.pwszSystemDictionaryFolder::%1").arg(*( pprof->mecab.pwszSystemDictionaryFolder));
     qDebug() << QString("*pprof->mecab.pwszSystemDictionaryFolder::%1").arg(*pprof->mecab.pwszSystemDictionaryFolder);
     qDebug() << QString("*pprof->mecab.pwszSystemDictionaryFolder->toLocal8Bit()::%1").arg(pprof->mecab.pwszSystemDictionaryFolder->toUtf8());
     ppArgv[iIdxArg++] = ( char * )"";
-    strcpy_s( szSysDic, sizeof( szSysDic ), pprof->mecab.pwszSystemDictionaryFolder->toUtf8().toStdString().c_str());
+    qsSysdic = *pprof->mecab.pwszSystemDictionaryFolder;
+    qsSysdic.replace( "/", "\\" );
+    strcpy_s( szSysDic, sizeof( szSysDic ), qsSysdic.toUtf8().toStdString().c_str());
     strcpy_s( szUsrDic, sizeof( szUsrDic ), szSysDic );
     if (( p = strstr( szUsrDic, "work\\" )) != NULL )
-    {	strcpy_s( p, sizeof( szUsrDic ) - ( p - szUsrDic ), "etc\\mecabrc" );
+    {	strcpy_s( p + 5, sizeof( szUsrDic ) - ( p + 5 - szUsrDic ), "etc\\mecabrc" );
         ppArgv[iIdxArg++] = ( char * )"-r";
         ppArgv[iIdxArg++] = szUsrDic;
 //		ppArgv[iIdxArg++] = "D:\\Tools\\MeCabon\\mecab-0.996\\etc\\mecabrc";
+        qDebug() << QString("-r %1").arg(szUsrDic);
     }
     if ( !( *pprof->mecab.pwszSystemDictionaryFolder ).isEmpty())
     {	ppArgv[iIdxArg++] = ( char * )"-d";
 //		UniToUTF8(( char * )szSysDictionary, szSysDic, sizeof( szSysDic ) - 1 );
         ppArgv[iIdxArg++] = szSysDic;
     }
+#if 0
     if ( !pprof->mecab.pwszUserDictionaryPath->isEmpty())
     {	szUsrDic[0] = '\0';
         ppArgv[iIdxArg++] = ( char * )"-u";
         strcpy_s( szUsrDic, sizeof( szUsrDic ), pprof->mecab.pwszUserDictionaryPath->toUtf8().toStdString().c_str());
         ppArgv[iIdxArg++] = szUsrDic;
     }
-    qDebug() << QString("mecab_model_new_build_option()");
-    return ( fpmecab_model_new( iIdxArg, ppArgv ));
+#endif
+    qDebug() << QString("mecab_model_new_build_option()");                  // for debug
+    if (( model = fpmecab_model_new( iIdxArg, ppArgv )) == NULL )
+    {   msgBuff.enterMessage( QString("*pprof->mecab.pwszSystemDictionaryFolder::%1").arg(*pprof->mecab.pwszSystemDictionaryFolder)); // for debug
+        msgBuff.enterMessage( QString("Argc::%1").arg(iIdxArg));            // for debug
+        for ( int nn = 0; nn < iIdxArg; nn++ )                              // for debug
+        {   msgBuff.enterMessage( QString("Argv[%1]::[%2]").arg(nn).arg(ppArgv[nn]));   // for debug
+        }                                                                   // for debug
+        msgBuff.enterMessage( QString("fpmecab_model_new function address::%1").arg(( qlonglong )fpmecab_model_new));  // for debug
+        msgBuff.enterMessage( QString("fpmecab_model_new return code::%1").arg(( qlonglong )model));  // for debug
+    }
+    return ( model );
 }
 
 
@@ -119,7 +135,9 @@ mecab_model_t *mecabif::mecab_model_new_build_option()
  * @detail 辞書ビルド時にlibMecab64.Dllを切り離し辞書ファイルのロックを外し、更新可能にするため、この関数でlibMecab64.dllをリンク
  */
 HINSTANCE mecabif::OpenMecabDll()
-{	if ( hMecabDLL == NULL )
+{//   messageBuff msgBuff;        // for debug
+
+    if ( hMecabDLL == NULL )
     {   //	wchar_t	szlibMeCabdll[_MAX_PATH];
 
 //		wcscpy_s( szlibMeCabdll, lengthof( szlibMeCabdll ), szMeCabExe );	// インストールされているDLLを使おうとしたが
@@ -129,11 +147,14 @@ HINSTANCE mecabif::OpenMecabDll()
         if (( hMecabDLL = LoadLibrary( L"libmecab64.dll" )) == NULL )
         {	mecabDllLastError = -101;
 //			mecabDllLastError = GetLastError();		// error code 193 32bitlib ng
+//            msgBuff.enterMessage( QString("OpenMecabDll step01 error"));            // for debug
             return ( NULL );
         }
+//        msgBuff.enterMessage( QString("OpenMecabDll step02"));            // for debug
         if (( fpmecab_model_new = ( LPmecab_model_new )GetProcAddress( hMecabDLL, "mecab_model_new" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -102;
+//            msgBuff.enterMessage( QString("OpenMecabDll step02 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
 #if 0									// 常数なのか？取得できない
@@ -146,63 +167,76 @@ HINSTANCE mecabif::OpenMecabDll()
         if (( fpmecab_model_new_tagger = ( LPmecab_model_new_tagger )GetProcAddress( hMecabDLL, "mecab_model_new_tagger" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -104;
+//            msgBuff.enterMessage( QString("OpenMecabDll step03 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_dictionary_info = ( LPmecab_dictionary_info )GetProcAddress( hMecabDLL, "mecab_dictionary_info" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -105;
+//            msgBuff.enterMessage( QString("OpenMecabDll step04 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_model_new_lattice = ( LPmecab_model_new_lattice )GetProcAddress( hMecabDLL, "mecab_model_new_lattice" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -106;
+//            msgBuff.enterMessage( QString("OpenMecabDll step05 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_destroy = ( LPmecab_destroy )GetProcAddress( hMecabDLL, "mecab_destroy" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -107;
+//            msgBuff.enterMessage( QString("OpenMecabDll step06 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_lattice_set_sentence = ( LPmecab_lattice_set_sentence )GetProcAddress( hMecabDLL, "mecab_lattice_set_sentence" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -108;
+//            msgBuff.enterMessage( QString("OpenMecabDll step07 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_parse_lattice = ( LPmecab_parse_lattice )GetProcAddress( hMecabDLL, "mecab_parse_lattice" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -109;
+//            msgBuff.enterMessage( QString("OpenMecabDll step08 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_lattice_get_bos_node = ( LPmecab_lattice_get_bos_node )GetProcAddress( hMecabDLL, "mecab_lattice_get_bos_node" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -110;
+//            msgBuff.enterMessage( QString("OpenMecabDll step09 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_lattice_destroy = ( LPmecab_lattice_destroy )GetProcAddress( hMecabDLL, "mecab_lattice_destroy" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -111;
+//            msgBuff.enterMessage( QString("OpenMecabDll step10 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_model_destroy = ( LPmecab_model_destroy )GetProcAddress( hMecabDLL, "mecab_model_destroy" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -112;
+//            msgBuff.enterMessage( QString("OpenMecabDll step11 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_lattice_tostr = ( LPmecab_lattice_tostr )GetProcAddress( hMecabDLL, "mecab_lattice_tostr" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -113;
+//            msgBuff.enterMessage( QString("OpenMecabDll step12 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_lattice_set_boundary_constraint = ( LPmecab_lattice_set_boundary_constraint )GetProcAddress( hMecabDLL, "mecab_lattice_set_boundary_constraint" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -114;
+//            msgBuff.enterMessage( QString("OpenMecabDll step13 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
         }
         if (( fpmecab_version = ( LPmecab_version )GetProcAddress( hMecabDLL, "mecab_version" )) == NULL )
         {	CloseMecabDll();
             mecabDllLastError = -115;
+//            msgBuff.enterMessage( QString("OpenMecabDll step14 error"));            // for debug
             return ( NULL );			// ERROR_DELAY_LOAD_FAILED
     }	}
+//    msgBuff.enterMessage( QString("OpenMecabDll step15"));            // for debug
 //    pSarchCsv->PostMessageW( UM_STATE_CHANGE, PlayState, 0 );
     return ( hMecabDLL );
 }
